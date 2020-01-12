@@ -1,0 +1,17 @@
+digraph savetime {
+	nodesep = 1.0
+
+	node [color = Red, fontname = Courier, shape = box]
+	edge [color = Blue, style = dashed]
+
+	校长 -> {
+		Depusty1 [fontcolor = Red] 
+		Vice2 BusinessManager
+	}
+	Depusty1 -> {
+		Teacher1 
+		Teacher2
+	}
+	BusinessManager -> ITManager
+	{rank = same; ITManager Teacher1 Teacher2}
+}

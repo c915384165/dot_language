@@ -1,0 +1,12 @@
+// The Test Table
+digraph {
+	A [label="Dot A"]
+	B [label="Dot B"]
+	C [label="<f0>Dot C|<f1>|" color=red rankdir="" shape=record]
+	D [label="<f2>Dot C|<f3>|" color="" rankdir="" shape=record]
+	"管理分组" [label="<f2>如何管理分组|创建分组|列出组成员｜管理分组" color="" rankdir="" shape=record]
+	A -> B
+	A -> C
+	A -> B
+	B -> C [label=test]
+}

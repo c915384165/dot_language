@@ -1,0 +1,58 @@
+strict digraph mygra  {
+	// splines="line"
+	graph [rankdir=LR]
+	node [shape=record]
+	P [label="graphviz"]
+	"import" [label="<ff>import|Graph|Digraph|Source|escape|nohtml|render"]
+
+	O [label="<f0>Objects|<f1>Graph/Digraph|<f2>node|<f3>edge"]
+    "methods" [label="<f0>methods|<f1>main methods|<f2> other methods"]
+
+	"main_methods" [label="<ff>main methods|<f0>.node([name], [label])|<f1>.edge([node name1], [node name2])"]
+	"other_methods" [label="<ff>other methods|<f0>.edges([list of match ]) have some bugs|<f1>.render([output.gv], view=True)|<f2>.update()|<f3>|"]
+
+	"attributes" [label="<f0>attributes|<f1>graph_attr|<f2>node_attr|<f3>edge_attr"]
+
+    "node_attr" [label="<f0>node_attr=\{'shape': 'plaintext/box/record'\}|name|label|shape|..."]
+    "edge_attr" [label="<f0>edge_attr|name|label|shape|constraint..."]
+    "graph_attr" [label="<f0>graph_attr|<f1>name|<f2>rankdir|<f3>format|<f4>comment|<f5>source|..."]
+    "format" [label="<f0>format|<f1>pdf|<f2>png|<f3>svg|<f4>...|"]
+
+    // "format" [label="<f0>|<f1>|<f2>|<f3>|<f4>|<f5>"]
+    // 1
+	P -> O:f0
+	P -> "import":ff
+	// 2
+	O:f0 -> "methods":f0 
+	O:f0 -> "attributes":f0
+
+	//3
+	"methods":f1 -> "main_methods":ff
+	"methods":f2 -> "other_methods":ff
+
+	"attributes":f2 -> "node_attr":f0
+	"attributes":f3 -> "edge_attr":f0
+	"attributes":f1 -> "graph_attr":f0
+
+	"graph_attr":f3 -> "format":f0
+
+	"attributes":f0 -> "other_methods":f2
+	// "main_methods" -> "other_methods":ff
+
+	// main methods
+	// "main_methods":f0 -> A:f2
+	// NE:f1 -> A:f3
+
+	// attributes
+	// A:f2 -> "node_attr":f0
+	// A:f1 -> "graph_attr":f0
+
+
+	// "graph_attr":f3 -> "format":f0
+
+    // M:f1 -> A:f2
+    // M:f2 -> A:f3
+    // O:f1 -> "node_attr":f0
+    // O:f1 -> "graph_attr":f0
+}
+
