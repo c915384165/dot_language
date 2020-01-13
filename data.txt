@@ -1,0 +1,4 @@
+testGraph;node;node_name0;label_test;ellipse
+#
+testGraph;edge;node_name0;node_name1;label_edge
+testGraph;node;node_name1;['a','b','c'];record

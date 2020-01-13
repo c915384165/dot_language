@@ -1,0 +1,27 @@
+strict digraph file {
+	rankdir=LR
+	
+	"files" -> "types", "process"
+	{rank=same; "types", "process"}
+	"process" -> "open":0, "close", "read", "write"
+
+	"text file" -> "\"leng string\"", ".txt", ".py"
+	"binary file" -> ".png", ".avi"
+
+	"types" -> "rough binary file" 
+	"rough binary file" -> "binary file" [label="with format"]
+	"rough binary file" -> "text file" [label="with code system (like utf-8)"]
+
+	"open" [label="<0> open|<1> tf=open(\"f.txt\",\"rt\")", shape=record]
+	"open":1 -> "mode":0
+
+	"mode" [label="<0> mode|<1> r/w/a/t/b|r: read|t: text|x: create file if FileNotExists|w: write and cover|b: binary file label|a: append at the end|+:r+x", shape=record]
+
+	"read" [label="<0> read|tf.read(size)|<1> tf.readline(size)|<2> tf.readlines(hint)", shape=record]
+	"write" [label="<0> write|tf.write(s)|<1> tf.writelines(lines)|<2> tf.seek(offset)", shape=record]
+	"close" [label="<0> close|<1> tf.close()", shape="record"]
+
+	"文件的存储状态" -> "文件的占用状态" [label="a = open( , )"]
+	"文件的占用状态" -> "文件的存储状态" [label="a.close()"]
+	"文件的占用状态" -> "读入", "写出"
+}

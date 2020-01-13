@@ -1,0 +1,19 @@
+#files.dot
+strict digraph folders {
+		
+	// "home" [label="home"]
+	// "myproject" [label="myproject"]
+	// "整理" [label="order", color=blue]
+
+	"整理" -> {"记忆","习惯","文件"}
+	"文件" -> {"源码", "脑图(索引)"}
+	"记忆" -> { "文件"} 
+	"脑图(索引)" -> "MMAP"
+	"MMAP" -> {"python"}
+	"python" -> {"课程链接", "源码"}
+	"接口" -> {"CSV", "node", "edge"}
+	"课程链接" -> "接口"
+	"Cambridge English in Use Vocabulary" -> "Dot"
+	"接口" -> "How to use interface?"
+
+}
