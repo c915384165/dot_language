@@ -1,0 +1,14 @@
+// Drawing graphs with dot:
+// Figure 5: Graph with polygonal shapes
+digraph G {
+	a -> b -> c;
+	b -> d;
+	a [shape=polygon,sides=5,peripheries=3,color=lightblue,style=filled];
+	//polygon: 多边形; peripheries: 周边，边缘，外围
+	c [shape=polygon,sides=4,skew=.4,label="hello world"];
+	// skew: 偏移
+	d [shape=invtriangle];
+	// invtriangle: inverse-triangle
+	e [shape=polygon,sides=4,distortion=.7];
+	// distortion: 曲解，失真
+}

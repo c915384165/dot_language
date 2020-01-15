@@ -15,6 +15,6 @@ strict digraph folders {
 	"课程链接" -> "接口"
 	"Cambridge English in Use Vocabulary" -> "Dot"
 	"接口" -> "How to use interface?" -> "定义接口", "编写程序解析接口", "编织数据文件"
-	"编写程序解析接口" -> "read files", "file process"
-	"read files" -> "open", "close", "read", "write"
+	"编写程序解析接口" -> "file process"
+	"file process" -> "open", "close", "read", "write"
 }

@@ -1,0 +1,21 @@
+// dot_learning.dot
+
+digraph dot_learning {
+	ranksep=.75; size="7.5,7.5";
+
+	{
+		node [shape=plaintext,fontsize=16]
+
+		past -> 1990 -> 1991 -> 1992 -> 1993
+
+		month -> January
+
+		"about";"how";"to";"use";"it";
+	}
+
+	"about" -> "how" -> "to";
+	{ "use", "how" } -> "it";
+
+	{ rank=same; "it", "to", "January"; }
+	{ rank=same; month; "about"; "use"}
+}

@@ -1,0 +1,4 @@
+digraph test {
+	rankdir=LR
+	graphviz [label = "Graphviz | is | open | source | graph | visualization | software." shape = record]
+}
