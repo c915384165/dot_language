@@ -1,0 +1,38 @@
+// qingyunian.dot
+digraph qingyunianrenwu {
+	// man
+	size="7.5, 7.5"; ranksep=1.25
+	node [shape=box; color=blue]
+	"庆帝"; "范闲"; "范建"; "林若甫"; "范思辙"; "陈萍萍"; "五竹";
+	"太子"; "二皇子"; "三皇子";
+	// woman
+	node [color=red; shape=ellipse]
+	"叶轻眉";  "长公主"; "林婉儿"; "柳如玉";
+	"范若若";
+
+	// 父子/女关系
+	edge [color=blue]
+	"庆帝" -> "范闲"; "太子"; "二皇子"; "三皇子";
+	"范建" -> "范闲";  [style=dotted]
+	"陈萍萍" -> "范闲" [style=dotted]
+	"五竹" -> "范闲" [style=dotted]
+	"范建" -> "范若若"; "范思辙";
+	"林若甫" -> "林婉儿";
+	
+	// 母子/女关系
+	edge [color=red]
+	"叶清眉" -> "范闲"
+	"长公主" -> "林婉儿"
+	"柳如玉" -> "范思辙"
+
+
+	// 夫妻关系
+	edge [color=green]
+	"庆帝" -> "叶清眉"
+	"范闲" -> "林婉儿"
+	"林若甫" -> "长公主"
+	"长公主" -> "太子" [style=dotted]
+
+	{rank=same; "庆帝"; "叶清眉"; "范建"; "林若甫"; "长公主"}
+	{rank=same; "范闲"; "范若若"; "林婉儿"; "范思辙"}
+}
