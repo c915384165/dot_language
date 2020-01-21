@@ -1,0 +1,12 @@
+// Linux命令行与shell脚本编程大全.dot
+
+digraph Linux_shell {
+	rankdir=LR
+	node [shape=box]
+	{
+		"内核" -> "硬件+软件" [label="控制"] 
+		"硬件+软件" -> record1
+		record1 [label="系统内存管理|软件程序管理|硬件设备管理|文件系统管理",shape=record]
+
+	}
+}

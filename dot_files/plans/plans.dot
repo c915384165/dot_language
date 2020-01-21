@@ -1,0 +1,26 @@
+digraph main_plan {
+	rankdir=LR
+	node [shape=record];
+
+	// subgraph cluster_work {
+	// 	main_1 [label="<title> 丙烯腈催化剂的再生及其应用|<author> 作者：朱正，杨斌，宋卫林，姜家乐|<company> 单位：上海石化上海石油化工股份有限公司化工部|<time> 时间：2006年|<cites> 参考文献"];
+	// 	cite3 [label="用于分散流化床催化剂颗粒或其表面重新暴露的方法|<status> Done",color=green];
+	// 	cite4 [label="Reactivation of molybdenum containing oxidation catalysts in fluid bed reactors."];
+	// 	cite5 [label="含钼氧化物流化床催化剂的再生方法"];
+	// 	cite6 [label="不饱和腈的制备方法"];
+	// 	cite7 [label="采用添加重钼酸胺的方法改进废钼基催化剂性能"];
+	// 	"main_1":cites -> {cite3,cite4,cite5,cite6,cite7};
+	// 	"查找文献" -> main_1
+	// 	"查找文献" [label="查找文献", color=green]
+	// }
+	subgraph cluster_learn {
+		label="My learning plans"
+		"Dot Language"; "python_graphviz"; "graphviz"
+		"graphviz" -> "Dot Language", "python_graphviz"
+
+		"Dot Language" -> "基本语法体系" -> "对象", "node", "edge", "属性", "shape" 
+	}
+	// subgraph cluster_others {
+		
+	// }
+}

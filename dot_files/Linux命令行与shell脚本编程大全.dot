@@ -1,0 +1,8 @@
+// Linux命令行与shell脚本编程大全.dot
+
+digraph Linux shell {
+	q1 [label="什么是Linux"]
+	q2 [label="Linux内核的组成"]
+	q3 [label="Linux桌面"]
+	q4 [label="Linux发行版"]
+}

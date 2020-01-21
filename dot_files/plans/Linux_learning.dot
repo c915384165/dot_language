@@ -1,0 +1,26 @@
+// Linux_learning.dot
+
+digraph Linux {
+	rankdir=LR
+	node [shape=box]
+	// main title
+	chapter6 [label="Ch6: Linux File System and Dir Management."shape=plaintext]
+	chapter6 -> 6.1
+	
+	// some concepts
+	FHS [label="FHS=Filesystem Hierarchy Standard|文件系统层次结构标准",shape=record]
+
+	// sub c6
+	subgraph cluster_c6 {
+		6.1 [label="目录与路径", shape=box]
+		6.1 -> "path", "directory", "$PATH"
+		subgraph cluster_c61 {
+			"path" -> "绝对路径","相对路径"
+			"directory" -> "command"
+			"command" [label="commands|cd=change directory|pwd=Print working directory|mkdir -p -m =make a new directory|rmdir=remove directory", shape=record]
+			"$PATH" [label="$PATH\n可执行文件路径的变量" shape=record,  color=red]
+			path_command [label="echo $PATH|" shape=record]
+			"$PATH" -> path_command
+		}
+	}
+}

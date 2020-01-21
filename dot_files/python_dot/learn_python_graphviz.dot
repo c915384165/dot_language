@@ -1,0 +1,13 @@
+// learn python graphviz
+digraph python_graphviz {
+	// object
+	node [shape=box,color=blue]
+	"Digraph";"Graph";"node";"edge";
+
+	// attributes
+	node [shape=ellipse,color=red]
+	"node"
+
+	// edges
+	
+}
